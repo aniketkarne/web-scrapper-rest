@@ -13,7 +13,7 @@ plugins:
 
 custom:
   apiGatewayCaching:
-    enable: false
+    enable: true
     clusterSize: '0.5'
     ttlInSeconds: 300
 
