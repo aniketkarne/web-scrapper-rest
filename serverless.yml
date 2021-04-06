@@ -1,0 +1,28 @@
+service: meta-scraper
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+plugins:
+  - serverless-api-gateway-caching
+  - serverless-jest-plugin
+
+custom:
+  apiGatewayCaching:
+    enable: false
+    clusterSize: '0.5'
+    ttlInSeconds: 300
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /metadata
+          method: post
+          caching:
+            enabled: true

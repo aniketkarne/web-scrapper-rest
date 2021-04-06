@@ -1,0 +1,11 @@
+{
+  "name": "web-scraper-rest",
+  "version": "1.0.0",
+  "dependencies": {
+    "html-metadata-parser": "^1.0.3",
+    "serverless-api-gateway-caching": "^1.6.1"
+  },
+  "devDependencies": {
+    "serverless-jest-plugin": "^0.3.0"
+  }
+}
